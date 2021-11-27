@@ -11,4 +11,21 @@
 # 1. ask for a sentence
 sentence = input("Place your sentence here: ")
 # 2. count the number of words, vowels, and consonants
+vow_count = 0
+cons_count = 0
+space_count = 0
+word_count = 0
+
+for count in sentence:
+    if count == "a" or count == "e" or count == "i" or count == "o" or count == "u" or \
+        count == "A" or count == "E" or count == "I" or count == "O" or count == "U":
+        vow_count = vow_count + 1 # added to vowel count
+    elif count == " ":
+        space_count = space_count + 1
+    else:
+        cons_count = cons_count + 1 # added to consonant count
+
+
 # 3. display
+print(f"Number of Vowels: {vow_count}")
+print(f"Number of consonants: {cons_count}")
