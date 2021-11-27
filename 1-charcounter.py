@@ -9,7 +9,7 @@
 
 # steps:
 # 1. ask for a sentence
-sentence = input("Place your sentence here: ")
+sentence = input("\33[1m\33[3m\33[31mPlace your sentence here:\33[0m ")
 # 2. count the number of words, vowels, and consonants
 vow_count = 0
 cons_count = 0
@@ -27,6 +27,6 @@ for count in sentence:
 
 
 # 3. display
-print(f"Number of Words: {word_count}")
-print(f"Number of Vowels: {vow_count}")
-print(f"Number of consonants: {cons_count}")
+print(f"\33[1m\33[3m\33[32mNumber of Words:\33[0m \33[1m\33[33m{word_count}\33[0m")
+print(f"\33[1m\33[3m\33[32mNumber of Vowels:\33[0m \33[1m\33[35m{vow_count}\33[0m")
+print(f"\33[1m\33[3m\33[32mNumber of consonants:\33[0m \33[1m\33[34m{cons_count}\33[0m")
