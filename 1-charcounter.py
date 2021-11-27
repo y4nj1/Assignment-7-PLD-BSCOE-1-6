@@ -14,7 +14,7 @@ sentence = input("Place your sentence here: ")
 vow_count = 0
 cons_count = 0
 space_count = 0
-word_count = 0
+word_count = len(sentence.split())
 
 for count in sentence:
     if count == "a" or count == "e" or count == "i" or count == "o" or count == "u" or \
@@ -27,5 +27,6 @@ for count in sentence:
 
 
 # 3. display
+print(f"Number of Words: {word_count}")
 print(f"Number of Vowels: {vow_count}")
 print(f"Number of consonants: {cons_count}")
