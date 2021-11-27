@@ -11,7 +11,7 @@
 
 # steps:
 # 1. ask for password
-password = input("Enter your password here: ")
+password = input("\33[1m\33[3m\33[35mEnter your password here:\33[0m ")
 
 # 2. check for capital letters, numbers, special characters
 charcount = len(password)
@@ -28,12 +28,11 @@ if (len(password) >= 15):
             digit += 1
         if(i == "!" or i == "#" or i == "$" or i == "%" or i == "&" or i == "'" or i == "()" or i == "*" or i== "+ " or i == "." \
         or i == "/" or i == "`" or i == "," or i == ":" or i == ";" or i == "<" or i == "=" or i == ">" or i == "?" or i == "@" \
-        or i == """^""" or i == """|""" or i == "~" or i == "{" or i == "}" or i == "_" ):
+        or i == """^""" or i == """|""" or i == "~" or i == "{" or i == "}" or i == "_" or i == """+""" ):
             special += 1
-else:
     if (lower >= 1 and upper >= 1 and special >= 1 and digit >= 1):
-        print("Valid Password")
+        print("\33[1m\33[3m\33[32mValid Password\33[0m")
     else:
-        print("Invalid Password")             
+        print("\33[1m\33[3m\33[31mInvalid Password\33[0m")             
 
 
