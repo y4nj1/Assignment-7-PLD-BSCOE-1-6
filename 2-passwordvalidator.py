@@ -14,5 +14,26 @@
 password = input("Enter your password here: ")
 
 # 2. check for capital letters, numbers, special characters
+charcount = len(password)
 
-# 3. display if password is valid or not
+upper, lower, digit, special = 0, 0, 0, 0
+
+if (len(password) >= 15):
+    for i in password:
+        if(i.isupper()):
+            upper += 1
+        if(i.islower()):
+            lower += 1
+        if(i.isdigit()):
+            digit += 1
+        if(i == "!" or i == "#" or i == "$" or i == "%" or i == "&" or i == "'" or i == "()" or i == "*" or i== "+ " or i == "." \
+        or i == "/" or i == "`" or i == "," or i == ":" or i == ";" or i == "<" or i == "=" or i == ">" or i == "?" or i == "@" \
+        or i == """^""" or i == """|""" or i == "~" or i == "{" or i == "}" or i == "_" ):
+            special += 1
+else:
+    if (lower >= 1 and upper >= 1 and special >= 1 and digit >= 1):
+        print("Valid Password")
+    else:
+        print("Invalid Password")             
+
+
