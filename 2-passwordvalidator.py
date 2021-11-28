@@ -26,9 +26,9 @@ if (len(password) >= 15):
             lower += 1
         if(i.isdigit()):
             digit += 1
-        if(i == "!" or i == "#" or i == "$" or i == "%" or i == "&" or i == "'" or i == "()" or i == "*" or i== "+ " or i == "." \
+        if(i == "!" or i == "#" or i == "$" or i == "%" or i == "&" or i == "'" or i == "(" or i == """)""" or i == "*" or i== "+ " or i == "." \
         or i == "/" or i == "`" or i == "," or i == ":" or i == ";" or i == "<" or i == "=" or i == ">" or i == "?" or i == "@" \
-        or i == """^""" or i == """|""" or i == "~" or i == "{" or i == "}" or i == "_" or i == """+""" ):
+        or i == """^""" or i == """|""" or i == "~" or i == "{" or i == "}" or i == "_" or i == """+""" or i == " " ):
             special += 1
     if (lower >= 1 and upper >= 1 and special >= 1 and digit >= 1):
         print("\33[1m\33[3m\33[32mValid Password\33[0m")
