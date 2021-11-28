@@ -18,7 +18,8 @@ charcount = len(password)
 
 upper, lower, digit, special = 0, 0, 0, 0
 
-if (len(password) >= 15):
+
+if charcount >= 15:
     for i in password:
         if(i.isupper()):
             upper += 1
@@ -28,11 +29,36 @@ if (len(password) >= 15):
             digit += 1
         if(i == "!" or i == "#" or i == "$" or i == "%" or i == "&" or i == "'" or i == "(" or i == """)""" or i == "*" or i== "+ " or i == "." \
         or i == "/" or i == "`" or i == "," or i == ":" or i == ";" or i == "<" or i == "=" or i == ">" or i == "?" or i == "@" \
-        or i == """^""" or i == """|""" or i == "~" or i == "{" or i == "}" or i == "_" or i == """+""" or i == " " ):
+        or i == """^""" or i == """|""" or i == "~" or i == "{" or i == "}" or i == "_" or i == """+""" or i == " " or i == "-"):
             special += 1
+
     if (lower >= 1 and upper >= 1 and special >= 1 and digit >= 1):
         print("\33[1m\33[3m\33[32mValid Password\33[0m")
-    else:
-        print("\33[1m\33[3m\33[31mInvalid Password\33[0m")             
-
-
+    if (upper < 1):
+        print("\33[1m\33[3m\33[33mYour password must have at least 1 capital letter.\33[0m")     
+    if (special < 1):
+        print("\33[1m\33[3m\33[34mYour password must have at least 1 special character.\33[0m")
+    if (digit < 1): 
+        print("\33[1m\33[3m\33[36mYour password must have at least 1 number.\33[0m")
+    if (lower < 1 or upper < 1 or special < 1 or digit < 1):
+        print("\33[1m\33[3m\33[31mInvalid Password\33[0m")
+else:    
+    for i in password:
+        if(i.isupper()):
+            upper += 1
+        if(i.islower()):
+            lower += 1
+        if(i.isdigit()):
+            digit += 1
+        if(i == "!" or i == "#" or i == "$" or i == "%" or i == "&" or i == "'" or i == "(" or i == """)""" or i == "*" or i== "+ " or i == "." \
+        or i == "/" or i == "`" or i == "," or i == ":" or i == ";" or i == "<" or i == "=" or i == ">" or i == "?" or i == "@" \
+        or i == """^""" or i == """|""" or i == "~" or i == "{" or i == "}" or i == "_" or i == """+""" or i == " " or i == "-"):
+            special += 1
+    print("\33[1m\33[3mYour password must have at least 15 characters.\33[0m")
+    if (upper < 1):
+        print("\33[1m\33[3m\33[33mYour password must have at least 1 capital letter.\33[0m")     
+    if (special < 1):
+        print("\33[1m\33[3m\33[34mYour password must have at least 1 special character.\33[0m")
+    if (digit < 1): 
+        print("\33[1m\33[3m\33[36mYour password must have at least 1 number.\33[0m")
+    print("\33[1m\33[3m\33[31mInvalid Password\33[0m")
