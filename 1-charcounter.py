@@ -27,6 +27,6 @@ for count in sentence:
 
 
 # 3. display
-print(f"\33[1m\33[3m\33[32mNumber of Words:\33[0m \33[1m\33[33m{word_count}\33[0m")
-print(f"\33[1m\33[3m\33[32mNumber of Vowels:\33[0m \33[1m\33[35m{vow_count}\33[0m")
-print(f"\33[1m\33[3m\33[32mNumber of consonants:\33[0m \33[1m\33[34m{cons_count}\33[0m")
+print(f"\33[1m\33[3mNumber of \33[32mWords\33[0m \33[1m\33[3min the given sentence:\33[0m \33[1m\33[33m{word_count}\33[0m")
+print(f"\33[1m\33[3mNumber of \33[32mVowels\33[0m \33[1m\33[3min the given sentence:\33[0m \33[1m\33[35m{vow_count}\33[0m")
+print(f"\33[1m\33[3mNumber of \33[32mConsonants\33[0m \33[1m\33[3min the given sentence:\33[0m \33[1m\33[34m{cons_count}\33[0m")
